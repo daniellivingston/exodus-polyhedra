@@ -69,8 +69,8 @@ cd py-lib
 python2.7 basic_ats_example.py
 ```
 
-This will use Numpy to generate a simple mesh in `output/meshing_ats_example.exo`.
+This will use Numpy to generate a simple mesh in `meshing_ats_example.exo`.
 
 # Visualizing Exodus files
 
-ParaView or VisIT can be used to view the Exodus fils.
+ParaView or VisIT can be used to view the Exodus files.
