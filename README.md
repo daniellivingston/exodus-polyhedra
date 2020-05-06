@@ -45,7 +45,7 @@ internally:
 export ACCESS=$(pwd)/seacas
 ```
 
-# Running the Python example
+# Running the Python examples
 
 ## Four Polygon Test
 
@@ -53,7 +53,7 @@ export ACCESS=$(pwd)/seacas
 
 ```bash
 cd four-polygon-test
-python2.7 ../py-lib/meshing_ats.py -n 10 -d 1 ./four_polygon.vtk
+python2.7 ../py-lib/meshing_ats.py -n 10 -d 1 -o ../output/four_polygon.exo ./four_polygon.vtk
 ```
 This will read in the 2D mesh `four_polygon.vtk` and extrude and write to
 `four_polygon.exo`.
@@ -63,7 +63,12 @@ This will read in the 2D mesh `four_polygon.vtk` and extrude and write to
 ![example](imgs/meshing_ats_example.png)
 
 ```bash
-python2.7 meshing_ats_example.py
+cd py-lib
+python2.7 basic_ats_example.py
 ```
 
-This will use Numpy to generate a simple mesh in `meshing_ats_example.exo`.
+This will use Numpy to generate a simple mesh in `output/meshing_ats_example.exo`.
+
+# Visualizing Exodus files
+
+ParaView or VisIT can be used to view the Exodus fils.
