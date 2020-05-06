@@ -106,10 +106,7 @@ if os.uname()[0] == 'Darwin':
 else:
     EXODUS_SO = ACCESS + "/lib/libexodus.so"
 
-try:
-    EXODUS_LIB = cdll.LoadLibrary(EXODUS_SO)
-except OSError:
-    EXODUS_LIB = cdll.LoadLibrary(ACCESS + "/lib/libexodus.a")
+EXODUS_LIB = cdll.LoadLibrary(EXODUS_SO)
 
 MAX_STR_LENGTH = 32      # match exodus default
 MAX_NAME_LENGTH = 256     # match exodus default

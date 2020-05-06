@@ -1,5 +1,5 @@
 import sys,os
-sys.path.append('.')
+sys.path.append('py-lib')
 import meshing_ats
 
 import numpy as np

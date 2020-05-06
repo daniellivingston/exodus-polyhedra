@@ -33,7 +33,28 @@ Or set the `SEACAS_DIR` environment variable:
 export SEACAS_DIR=$(pwd)/seacas
 ```
 
-## Adding 
+**Also,** export the environment variable `ACCESS`, which Exodus uses
+internally:
+
+```bash
+export ACCESS=$(pwd)/seacas
+```
 
 # Running the Python example
 
+## Four Polygon Test
+
+```bash
+cd four-polygon-test
+python2.7 ../py-lib/meshing_ats.py -n 10 -d 1 ./four_polygon.vtk
+```
+This will read in the 2D mesh `four_polygon.vtk` and extrude and write to
+`four_polygon.exo`.
+
+## Basic Example
+
+```bash
+python2.7 meshing_ats_example.py
+```
+
+This will use Numpy to generate a simple mesh in `meshing_ats_example.exo`.
