@@ -47,6 +47,8 @@ export ACCESS=$(pwd)/seacas
 
 # Running the Python examples
 
+Reference meshes for the two examples can be found in the `output/` directory.
+
 ## Four Polygon Test
 
 ![four polygons](imgs/four_poly_3D.png)
