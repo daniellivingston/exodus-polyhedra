@@ -12,6 +12,11 @@ gcc and g++.
 It may take up to 45 minutes for Exodus to compile, depending on 
 network speeds and machine specs.
 
+---
+
+For issues with compiling Exodus or running this makefile, contact
+Daniel Livingston at [livingston@lanl.gov](mailto:livingston@lanl.gov).
+
 # Configuring the Python examples
 
 Python scripts are included in the `py-lib` directory. These are used to create
