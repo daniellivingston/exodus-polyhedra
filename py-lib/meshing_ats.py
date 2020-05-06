@@ -34,10 +34,10 @@ import argparse
 import vtk_io
 
 try:
-    import exodus
+    import exodus2 as exodus
 except ImportError:
     sys.path.append(os.path.join(os.environ["SEACAS_DIR"],"lib"))
-    import exodus
+    import exodus2 as exodus
 
 
 class SideSet(object):
@@ -182,7 +182,12 @@ class Mesh2D(object):
             points_found = False
             polygons_found = False
             while True:
-                line = fid.readline().decode('utf-8')
+                line = fid.readline()
+                try:
+                    line = line.decode('utf-8')
+                except AttributeError:
+                    pass
+
                 if not line:
                     # EOF
                     break
@@ -487,6 +492,8 @@ class Mesh3D(object):
         # also, though not required by the spec, paraview and visit
         # seem to crash if num_face_blocks != num_elem_blocks.  So
         # make face blocks here too, which requires renumbering the faces.
+
+        #from functools import cmp_to_key
 
         # -- first pass, form all elem blocks and make the map from old-to-new
         new_to_old_elems = []
@@ -826,7 +833,7 @@ class Mesh3D(object):
         assert len(bottom) == mesh2D.num_cells()
 
         # -- len of vertical sides sideset is number of external edges * number of cells, no pinchouts here
-        num_sides = ncells_tall * sum(1 for e,c in mesh2D.edge_counts().iteritems() if c == 1)
+        num_sides = ncells_tall * sum(1 for e,c in mesh2D.edge_counts().items() if c == 1)
         assert num_sides == len(vertical_side_cells)
         assert num_sides == len(vertical_side_indices)
 
@@ -902,5 +909,5 @@ if __name__ == "__main__":
     m2 = Mesh2D.read_VTK(options.infile)
     if options.plot:
         m2.plot()
-    m3 = Mesh3D.extruded_Mesh2D(m2, [options.depth,], [options.num_cells,], [10000,])
+    m3 = Mesh3D.extruded_Mesh2D(m2, 'constant', [options.depth,], [options.num_cells,], [10000,])
     m3.write_exodus(options.outfile)
