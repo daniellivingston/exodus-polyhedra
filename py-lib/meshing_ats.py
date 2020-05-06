@@ -31,6 +31,7 @@ import sys,os
 import numpy as np
 import collections
 import argparse
+import vtk_io
 
 try:
     import exodus
@@ -245,8 +246,7 @@ class Mesh2D(object):
         
     @classmethod
     def read_VTK_Simplices(cls, filename):
-        """Stolen from meshio, https://github.com/nschloe/meshio/blob/master/meshio/vtk_io.py"""
-        import vtk_io
+
         with open(filename,'r') as fid:
             data = vtk_io.read_buffer(fid)
 

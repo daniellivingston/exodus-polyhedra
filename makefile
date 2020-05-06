@@ -14,7 +14,7 @@
 #    CC (default: gcc) : C source compiler
 #    FC (default: gfortran) : Fortran source compiler
 #    FC90 (default: gfortran) : Fortran90 source compiler
-#    EXO_LIB_DIR (default: LAGRIT_ROOT_DIR/seacas/lib) : ExodusII library location
+#    EXO_BUILD_DIR (default: ./seacas/) : ExodusII library location
 #    EXO_CMAKE_FLAGS (default: none) : Add custom CMake flags to pass to cmake-exodus
 #================================================================#
 
@@ -24,7 +24,6 @@ FC := gfortran
 FC90 := $(FC)
 
 EXO_BUILD_DIR := $(shell pwd)
-EXO_LIB_DIR := $(shell pwd)/seacas/lib
 EXO_CMAKE_FLAGS := 
 
 .PHONY: exodus
@@ -33,7 +32,7 @@ exodus :
 	set -e; \
 	export CGNS=OFF; \
 	export MATIO=OFF; \
-	export SHARED=NO; \
+	export SHARED=YES; \
 	export LG_DIR=`pwd`; \
 	export NEEDS_ZLIB=YES; \
 	export GNU_PARALLEL=OFF; \
