@@ -44,6 +44,8 @@ export ACCESS=$(pwd)/seacas
 
 ## Four Polygon Test
 
+![four polygons](imgs/four_poly_3D.png)
+
 ```bash
 cd four-polygon-test
 python2.7 ../py-lib/meshing_ats.py -n 10 -d 1 ./four_polygon.vtk
@@ -52,6 +54,8 @@ This will read in the 2D mesh `four_polygon.vtk` and extrude and write to
 `four_polygon.exo`.
 
 ## Basic Example
+
+![example](imgs/meshing_ats_example.png)
 
 ```bash
 python2.7 meshing_ats_example.py
