@@ -7,6 +7,11 @@ A Makefile is provided to ease to process of building Exodus. Just run:
 and it will be downloaded to `./seacas/` and built. You will need CMake 3.10+,
 gcc and g++.
 
+---
+
+It may take up to 45 minutes for Exodus to compile, depending on 
+network speeds and machine specs.
+
 # Configuring the Python example
 
 A Python script is included in this directory (`meshing_ats.py`) which takes 
