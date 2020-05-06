@@ -53,7 +53,7 @@ export ACCESS=$(pwd)/seacas
 
 ```bash
 cd four-polygon-test
-python2.7 ../py-lib/meshing_ats.py -n 10 -d 1 -o ../output/four_polygon.exo ./four_polygon.vtk
+python2.7 ../py-lib/meshing_ats.py -n 10 -d 1 ./four_polygon.vtk
 ```
 This will read in the 2D mesh `four_polygon.vtk` and extrude and write to
 `four_polygon.exo`.

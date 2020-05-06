@@ -56,4 +56,4 @@ mat_ids = [10000,] + [20000,]*(len(restsoil_zones_thickness) - 1) + [30000,]
 #make 3D mesh
 m3 = meshing_ats.Mesh3D.extruded_Mesh2D(m2, types, thicknesses, ncells, mat_ids)
 #write 3D mesh
-m3.write_exodus("../output/basic_ats_example.exo")
+m3.write_exodus("basic_ats_example.exo")
