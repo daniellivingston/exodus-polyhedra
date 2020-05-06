@@ -12,12 +12,12 @@ gcc and g++.
 It may take up to 45 minutes for Exodus to compile, depending on 
 network speeds and machine specs.
 
-# Configuring the Python example
+# Configuring the Python examples
 
-A Python script is included in this directory (`meshing_ats.py`) which takes 
-a general 2D mesh and extrudes it into 3D, writing out an Exodus file.
+A Python script is included in the `py-lib` directory. These are used to create
+3D Exodus meshes.
 
-This script was written by Ethan Coon as part of the Amanzi/ATS project and can 
+These scripts was written by Ethan Coon as part of the Amanzi/ATS project and can 
 originally be found [here](https://github.com/amanzi/ats/tree/master/tools/meshing_ats/meshing_ats).
 
 ## Configuring `python-exodus`
