@@ -4,11 +4,6 @@
 #  
 #  Targets:
 #    - exodus : build the Exodus library
-#    - test : run the LaGriT test suite
-#    - help : show a help screen
-#    - header : build src/lagrit.h header file
-#    - clean : remove all object and mod files
-#    - clobber : remove all object and mod files *and* library
 #
 #  Variables:
 #    CC (default: gcc) : C source compiler
