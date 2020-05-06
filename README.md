@@ -14,10 +14,10 @@ network speeds and machine specs.
 
 # Configuring the Python examples
 
-A Python script is included in the `py-lib` directory. These are used to create
+Python scripts are included in the `py-lib` directory. These are used to create
 3D Exodus meshes.
 
-These scripts was written by Ethan Coon as part of the Amanzi/ATS project and can 
+These scripts were written by Ethan Coon as part of the Amanzi/ATS project and can 
 originally be found [here](https://github.com/amanzi/ats/tree/master/tools/meshing_ats/meshing_ats).
 
 ## Configuring `python-exodus`
