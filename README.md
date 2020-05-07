@@ -76,6 +76,14 @@ python2.7 basic_ats_example.py
 
 This will use Numpy to generate a simple mesh in `meshing_ats_example.exo`.
 
+# Polyhedra elements in Exodus
+
+Exodus supports Polyhedra elements, these are made up of element vertices, the faces composed of vertices, and the elements composed of faces. The 3D polyhedra elements are represented as elements with a variable number of faces in their connectivity. The faces can either be regular faces such as quadrilateral or triangles; or they can be topologically two-dimensional arbitrary polyhedra themselves.
+
+See example descriptions in the `/output` directory containing example Exodus `.exo` files.
+
+Exodus documentation on polyhedral elements: https://gsjaardema.github.io/seacas/html/polyhedra.html
+
 # Visualizing Exodus files
 
 ParaView or VisIT can be used to view the Exodus files.
